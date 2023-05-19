@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 interface PaginationProps {
   pageNumbers: number[];
@@ -6,16 +6,20 @@ interface PaginationProps {
   currentPage: number;
 }
 
-const Pagination: React.FC<PaginationProps> = ({ pageNumbers, handleClick, currentPage }) => {
-  return (
-    <ul className="pagination">
-      {pageNumbers.map((number) => (
-        <li key={number} id={number.toString()} onClick={handleClick} className={currentPage === number ? 'active' : undefined}>
-          {number}
-        </li>
-      ))}
-    </ul>
-  );
-};
+class Pagination extends Component<PaginationProps> {
+  render() {
+    const { pageNumbers, handleClick, currentPage } = this.props;
+
+    return (
+      <ul className="pagination">
+        {pageNumbers.map((number) => (
+          <li key={number} id={number.toString()} onClick={handleClick} className={currentPage === number ? 'active' : undefined}>
+            {number}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+}
 
 export default Pagination;
