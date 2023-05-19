@@ -1,0 +1,12 @@
+.review {
+  margin-bottom: 10px;
+}
+
+.reviewName {
+  font-weight: bold;
+}
+
+.reviewDate {
+  text-align: right;
+  color: grey;
+}

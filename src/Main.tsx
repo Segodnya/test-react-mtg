@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import data from './data.json';
 import Pagination from './Pagination.tsx';
-import ReviewItem from './Review.tsx';
+import ReviewItem from './ReviewItem.tsx';
+import styles from './Main.module.css';
 
 interface MainProps {
   language: string;
@@ -55,7 +56,7 @@ class Main extends Component<MainProps, MainState> {
     }
 
     return (
-      <main className="main">
+      <main className={styles.main}>
         <ul className="reviews-list">
           {currentReviews.map((review, index) => (
             <ReviewItem key={index} name={review.name} review={review.review} date={review.date} />

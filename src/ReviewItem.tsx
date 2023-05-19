@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from './ReviewItem.module.css';
 
 interface ReviewProps {
   name: string;
@@ -8,7 +9,7 @@ interface ReviewProps {
 
 interface ReviewState {}
 
-class Review extends Component<ReviewProps, ReviewState> {
+class ReviewItem extends Component<ReviewProps, ReviewState> {
   shortenName = (name: string) => {
     const matches = name.match(/^(\S+)\s+(\S)\S*/);
     if (matches) {
@@ -21,13 +22,13 @@ class Review extends Component<ReviewProps, ReviewState> {
     const { name, review, date } = this.props;
 
     return (
-      <li className="review">
-        <div className="review__name">{this.shortenName(name)}</div>
+      <li className={styles.review}>
+        <div className={styles.reviewName}>{this.shortenName(name)}</div>
         <div className="review__text">{review}</div>
-        <div className="review__date">{date}</div>
+        <div className={styles.reviewDate}>{date}</div>
       </li>
     );
   }
 }
 
-export default Review;
+export default ReviewItem;
