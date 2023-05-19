@@ -8,6 +8,8 @@ TypeScript, React, CSS Modules
 
 ## Github Pages
 
+https://segodnya.github.io/test-react-mtg/
+
 ## Available Scripts
 
 In the project directory, you can run:

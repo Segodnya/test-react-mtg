@@ -6,10 +6,10 @@
 
 body {
   width: 320px;
+  margin: 0 auto;
 }
 
 .app {
-  margin: 0 auto;
   padding: 10px;
   width: 300px;
   display: flex;
