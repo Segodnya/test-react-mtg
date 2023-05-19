@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import data from './data.json';
+import Pagination from './Pagination.tsx';
+import ReviewItem from './Review.tsx';
 
 interface MainProps {
   language: string;
@@ -56,20 +58,10 @@ class Main extends Component<MainProps, MainState> {
       <main className="main">
         <ul className="reviews-list">
           {currentReviews.map((review, index) => (
-            <li key={index} className="review">
-              <div className="review__name">{review.name}</div>
-              <div className="review__text">{review.review}</div>
-              <div className="review__date">{review.date}</div>
-            </li>
+            <ReviewItem key={index} name={review.name} review={review.review} date={review.date} />
           ))}
         </ul>
-        <ul className="pagination">
-          {pageNumbers.map((number) => (
-            <li key={number} id={number.toString()} onClick={this.handleClick} className={currentPage === number ? 'active' : undefined}>
-              {number}
-            </li>
-          ))}
-        </ul>
+        <Pagination pageNumbers={pageNumbers} handleClick={this.handleClick} currentPage={currentPage} />
       </main>
     );
   }
