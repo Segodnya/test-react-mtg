@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import styles from './Header.module.css';
+import logo from './logo.svg';
 
 interface HeaderProps {
   onLanguageChange: (language: string) => void;
@@ -38,13 +40,13 @@ class Header extends Component<HeaderProps, HeaderState> {
 
   render() {
     return (
-      <header className="header">
-        <img src="https://example.com/logo.png" alt="Logo" />
+      <header className={styles.header}>
+        <img src={logo} alt="Logo" className={styles.logo} />
+        <div className="watch">{this.state.time}</div>
         <select className="language-select" onChange={this.handleLanguageChange} value={this.state.language}>
           <option value="ru">Русский</option>
           <option value="en">English</option>
         </select>
-        <div className="watch">{this.state.time}</div>
       </header>
     );
   }

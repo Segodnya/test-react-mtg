@@ -1,0 +1,11 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 32px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
