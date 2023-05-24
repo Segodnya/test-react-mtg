@@ -14,6 +14,8 @@ https://segodnya.github.io/test-react-mtg/
 
 - entry-point теперь TS (ранее был JS);
 - выстроена структура проекта (компонентный подход);
+- исправлены алерты импорта tsx-модулей;
+- добавлена конфигурация Webpack (npm run build).
 
 ## Available Scripts
 
@@ -29,13 +31,7 @@ You may also see any lint errors in the console.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Запускает сборку в один js-файл через кастомный webpack.config.
 
 ### `npm run eject`
 
