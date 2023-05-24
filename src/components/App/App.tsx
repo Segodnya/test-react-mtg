@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Header from './Header.tsx';
-import Main from './Main.tsx';
+import Header from '../Header/Header.tsx';
+import Main from '../Main/Main.tsx';
 
 interface AppState {
   language: string;

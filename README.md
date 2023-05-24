@@ -10,6 +10,11 @@ TypeScript, React, CSS Modules
 
 https://segodnya.github.io/test-react-mtg/
 
+## Исправления ошибок
+
+- entry-point теперь TS (ранее был JS);
+- выстроена структура проекта (компонентный подход);
+
 ## Available Scripts
 
 In the project directory, you can run:

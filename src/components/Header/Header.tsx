@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from './Header.module.css';
-import logo from './logo.svg';
+import logo from '../../assets/logo.svg';
 
 interface HeaderProps {
   onLanguageChange: (language: string) => void;
