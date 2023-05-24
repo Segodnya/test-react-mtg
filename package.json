@@ -14,9 +14,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "webpack --mode production --config webpack.config.js",
+    "rbuild": "react-scripts build",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run rbuild",
+    "deploy": "gh-pages -d rbuild"
   },
   "eslintConfig": {
     "extends": [
