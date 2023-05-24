@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import data from '../../data.json';
-import Pagination from '../Pagination/Pagination.tsx';
-import ReviewItem from '../ReviewItem/ReviewItem.tsx';
+import Pagination from '../Pagination/Pagination';
+import ReviewItem from '../ReviewItem/ReviewItem';
 import styles from './Main.module.css';
 
 interface MainProps {
